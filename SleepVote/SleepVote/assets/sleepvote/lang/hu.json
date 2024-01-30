@@ -1,0 +1,9 @@
+{
+  "NowSleeping": "{0}/{1} emberek alszanak {2} még szükség van az éjszaka eltöltésére",
+  "CMDSleepPrecentage": "/twl config SleepPrecentage [int] az alvás százalékos arányának beállításához<br/>/twl config SleepPrecentage értékének megjelenítéséhez",
+  "cmdSleepPrecentage_show": "Az alvás százalékos értéke most {0}",
+  "cmdSleepPrecentage_modify": "Az alvási százalék {0}",
+  "null_Arg": "Nincsenek érvek.",
+  "Too_many_args": "Túl sok érv",
+  "Not_Server": "A parancs csak a kiszolgálóval való használatra szolgál."
+}

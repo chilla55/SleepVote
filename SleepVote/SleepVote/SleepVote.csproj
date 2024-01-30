@@ -53,6 +53,10 @@
   <Content Include="assets\**">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
   </Content>
+  <None Remove="assets\sleepvote\lang\afr.json" />
+  <None Remove="assets\sleepvote\lang\de.json" />
+  <None Remove="assets\sleepvote\lang\hu.json" />
+  <None Remove="assets\sleepvote\lang\nl.json" />
   <Content Include="modinfo.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
   </Content>

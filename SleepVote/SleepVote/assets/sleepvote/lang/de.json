@@ -1,0 +1,9 @@
+{
+  "NowSleeping": "{0}/{1} schlafende Spieler {2} sind noch benötigt, um die Nacht zu überspringen",
+  "CMDSleepPrecentage": "/twl config SleepPrecentage [float] zum Einstellen des Schlafprozentsatzes<br/>/twl config SleepPrecentage um Wert anzuzeigen",
+  "cmdSleepPrecentage_show": "Der Prozentsatz für den Schlaf Vote beträgt jetzt {0}",
+  "cmdSleepPrecentage_modify": "Der Prozentsatz für den Schlaf Vote beträgt {0}",
+  "null_Arg": "Es sind keine Argumente vorhanden.",
+  "Too_many_args": "Zu viele Argumente",
+  "Not_Server": "Der Befehl ist nur zur Verwendung mit dem Server gedacht."
+}

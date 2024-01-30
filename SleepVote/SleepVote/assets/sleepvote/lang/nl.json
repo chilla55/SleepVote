@@ -1,0 +1,9 @@
+{
+  "NowSleeping": "{0}/{1} mensen die slapen {2} nog nodig om de nacht door te komen",
+  "CMDSleepPrecentage": "/twl config SleepPrecentage [int] om het slaappercentage in te stellen<br/>/twl config SleepPrecentage om de waarde te tonen",
+  "cmdSleepPrecentage_show": "Het slaappercentage is nu {0}",
+  "cmdSleepPrecentage_modify": "Het slaappercentage is {0}",
+  "null_Arg": "Er zijn geen argumenten aanwezig.",
+  "Too_many_args": "Te veel argumenten",
+  "Not_Server": "Het commando is alleen bedoeld voor gebruik met de server."
+}

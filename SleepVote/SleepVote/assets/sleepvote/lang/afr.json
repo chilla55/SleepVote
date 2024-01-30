@@ -1,0 +1,9 @@
+﻿{
+  "NowSleeping": "{0}/{1} mense slaap {2} nog nodig om deur die nag te slaap",
+  "CMDSleepPrecentage": "/twl config SlaapPersentasie [int] om die slaap persentasie te stel<br/>/twl config SlaapPersentasie om die waarde te wys",
+  "cmdSleepPrecentage_show": "Die slaap persentasie is now {0}",
+  "cmdSleepPrecentage_modify": "Die slaap persentasie is {0}",
+  "null_Arg": "Geen argumente is teenwoordig nie.",
+  "Too_many_args": "Te veel argumente",
+  "Not_Server": "Die opdrag is slegs vir gebruik met die bediener."
+}
