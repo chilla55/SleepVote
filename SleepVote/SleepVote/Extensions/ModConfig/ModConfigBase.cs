@@ -1,0 +1,20 @@
+﻿using System.Linq;
+using Vintagestory.API.Common;
+
+namespace SleepVote.Extensions.ModConfig
+{
+    public abstract class ModConfigBase
+    {
+        public abstract string ModCode { get; }
+
+        public static string GetModCode(object caller)
+        {
+            return caller.GetType().Namespace.Split('.').FirstOrDefault() ?? "unknown-mod-code";
+        }
+
+        public virtual void Save(ICoreAPI api)
+        {
+            api.SConfig(this);
+        }
+    }
+}

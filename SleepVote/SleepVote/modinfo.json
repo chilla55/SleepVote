@@ -1,13 +1,13 @@
 {
-    "type": "code",
-    "modid": "sleepvote",
-    "name": "SleepVote",
-    "authors": [
-        "Unknown"
-    ],
-    "description": "To be added",
-    "version": "1.0.0",
-    "dependencies": {
-        "game": ""
-    }
+  "type": "code",
+  "modid": "SleepVote",
+  "name": "Sleep Vote",
+  "authors": [
+    "Chilla55"
+  ],
+  "description": "A mod that let the player vote to skip the day by going to bed",
+  "version": "1.0.3",
+  "dependencies": {
+    "game": ""
+  }
 }

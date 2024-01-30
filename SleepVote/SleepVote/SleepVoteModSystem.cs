@@ -1,4 +1,11 @@
-﻿using Vintagestory.API.Client;
+﻿using HarmonyLib;
+using ProperVersion;
+using System.Reflection;
+using System.Transactions;
+using SleepVote.Extensions.ModConfig;
+using SleepVote.server;
+using SleepVote.server.commands;
+using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.API.Config;
 using Vintagestory.API.Server;
@@ -7,21 +14,30 @@ namespace SleepVote
 {
     public class SleepVoteModSystem : ModSystem
     {
-        // Called on server and client
-        // Useful for registering block/entity classes on both sides
+        public static SleepVoteModSystem Instance;
+
+        public ICoreClientAPI ClientAPI;
+
+        public ICoreServerAPI ServerApi;
+        public server.ServerModConfig ServerConfig;
+
         public override void Start(ICoreAPI api)
         {
-            api.Logger.Notification("Hello from template mod: " + api.Side);
+            Instance = this;
+            Harmony twlsppatches = new Harmony("SleepVote.Patches");
+            twlsppatches.PatchAll();
         }
 
         public override void StartServerSide(ICoreServerAPI api)
         {
-            api.Logger.Notification("Hello from template mod server side: " + Lang.Get("sleepvote:hello"));
+            ServerApi = api;
+            ServerConfig = api.LCConfig<ServerModConfig>(this);
+            Commands.Createcmd(api);
         }
 
         public override void StartClientSide(ICoreClientAPI api)
         {
-            api.Logger.Notification("Hello from template mod client side: " + Lang.Get("sleepvote:hello"));
+            ClientAPI = api;
         }
     }
 }
