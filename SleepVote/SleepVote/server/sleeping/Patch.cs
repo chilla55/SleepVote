@@ -21,8 +21,10 @@ namespace SleepVote.server.sleeping
         public static bool Patch_ModSleeping_AreAllPlayersSleeping_Prefix(ICoreServerAPI ___sapi, ref bool __result)
         {
             List<IServerPlayer> allPlayers = ___sapi.World.AllPlayersThatCouldSleep().ToList();
+            if (allPlayers.Count == 0)
+                return __result = false;
             int playersSleeping = allPlayers.SleepingPlayers().Count();
-            double requiredNumberOfPlayers = GameMath.Clamp(Math.Floor(allPlayers.Count * SleepVote.SleepVoteModSystem.Instance.ServerConfig.Sleepprecentage), 1, allPlayers.Count);
+            double requiredNumberOfPlayers = Math.Clamp(Math.Floor(allPlayers.Count * SleepVote.SleepVoteModSystem.Instance.ServerConfig.Sleepprecentage), 1, allPlayers.Count);
             __result = playersSleeping >= requiredNumberOfPlayers;
             if (currentlysleeping != playersSleeping)
             {

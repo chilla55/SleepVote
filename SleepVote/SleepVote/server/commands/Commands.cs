@@ -17,7 +17,7 @@ namespace SleepVote.server.commands
                 .WithName("Sleepvote")
                 .RequiresPrivilege(Privilege.root)
                 .BeginSubCommand("SleepPrecentage")
-                    .WithArgs(api.ChatCommands.Parsers.OptionalFloat("Sleep Precentage", 1f))
+                    .WithArgs(api.ChatCommands.Parsers.OptionalFloat("Sleep Precentage", 0.75f))
                     .HandleWith(Sleeping.SleepPrecentage)
                     .WithDescription(ModLang.GetSuffix("CMDSleepPrecentage"))
                 .EndSubCommand();

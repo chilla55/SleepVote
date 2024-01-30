@@ -27,16 +27,17 @@ namespace SleepVote.server.commands
         }*/
         public static TextCommandResult SleepPrecentage(TextCommandCallingArgs args)
         {
-            if (args == null) return ModTextCommandResult.Error("null_Arg");
-            if (args.ArgCount > 1) return ModTextCommandResult.Error("Too_many_args");
+            
+            if (args == null) return ModTextCommandResult.Error("null_Arg", args.Caller.Player);
+            if (args.ArgCount > 1) return ModTextCommandResult.Error("Too_many_args", args.Caller.Player);
             ServerModConfig serverConfig = SleepVote.SleepVoteModSystem.Instance.ServerConfig;
-            if (serverConfig == null) return ModTextCommandResult.Error("Not_Server");
+            if (serverConfig == null) return ModTextCommandResult.Error("Not_Server", args.Caller.Player);
             if (!args.Parsers[0].IsMissing)
             {
-                serverConfig.Sleepprecentage = (float)args.Parsers[0].GetValue();
-                return ModTextCommandResult.Success("cmdSleepPrecentage_modify", serverConfig.Sleepprecentage);
+                serverConfig.Sleepprecentage = Math.Clamp((float)args.Parsers[0].GetValue(),0f,1f);
+                return ModTextCommandResult.Success("cmdSleepPrecentage_modify", args.Caller.Player, serverConfig.Sleepprecentage);
             }
-            return ModTextCommandResult.Success("cmdSleepPrecentage_show", serverConfig.Sleepprecentage);
+            return ModTextCommandResult.Success("cmdSleepPrecentage_show", args.Caller.Player, serverConfig.Sleepprecentage);
         }
     }
 }

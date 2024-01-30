@@ -27,7 +27,7 @@ namespace SleepVote.server.sleeping
                 foreach (var player in allPlayers)
                 {
                     double remain = (requiredNumberOfPlayers - sleepingPlayers.Count);
-                    var message = ModLang.GetL("NowSleeping", player.LanguageCode, sleepingPlayers.Count,allPlayers.Count, GameMath.Clamp(requiredNumberOfPlayers - sleepingPlayers.Count, 0, allPlayers.Count));
+                    var message = ModLang.GetL("NowSleeping", player.LanguageCode, sleepingPlayers.Count,allPlayers.Count, Math.Clamp(requiredNumberOfPlayers - sleepingPlayers.Count, 0, allPlayers.Count));
                     SVMS.ServerApi.SendMessage(player, GlobalConstants.AllChatGroups, message, EnumChatType.Notification);
                 }
             }

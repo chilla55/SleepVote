@@ -11,14 +11,17 @@ namespace SleepVote.Shared.utils
 {
     internal class ModLang
     {
-        public static string GetSuffix(string id) => "SleepVote:" + id;
+        public static string GetSuffix(string id) => "sleepvote:" + id;
         public static string Get(string id, params object[] args)
         {
-            return Lang.Get("SleepVote:" + id, args);
+            return Lang.Get("sleepvote:" + id, args);
         }
         public static string GetL(string id, string key, params object[] args)
         {
-            return Lang.GetL("SleepVote:" + id, key, args);
+            string ret = Lang.GetL(key, "sleepvote:" + id, args);
+            if (ret == "sleepvote:" + id)
+                ret = Lang.GetL("en", "sleepvote:" + id, args);
+            return ret;
         }
     }
 }
