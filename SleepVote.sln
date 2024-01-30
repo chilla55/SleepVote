@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34511.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CakeBuild", "SleepVote\CakeBuild\CakeBuild.csproj", "{ABFA6046-F990-4CB2-B42F-E650530D7144}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SleepVote", "SleepVote\SleepVote\SleepVote.csproj", "{6DDC4D2F-6320-4B7D-BD3A-E7FA54BFDAAD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ABFA6046-F990-4CB2-B42F-E650530D7144}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABFA6046-F990-4CB2-B42F-E650530D7144}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABFA6046-F990-4CB2-B42F-E650530D7144}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABFA6046-F990-4CB2-B42F-E650530D7144}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DDC4D2F-6320-4B7D-BD3A-E7FA54BFDAAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DDC4D2F-6320-4B7D-BD3A-E7FA54BFDAAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DDC4D2F-6320-4B7D-BD3A-E7FA54BFDAAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DDC4D2F-6320-4B7D-BD3A-E7FA54BFDAAD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {51E70680-D7C7-42E6-ABD7-6863CE6FC260}
+	EndGlobalSection
+EndGlobal
