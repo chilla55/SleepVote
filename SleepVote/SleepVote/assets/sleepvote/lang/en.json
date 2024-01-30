@@ -1,3 +1,9 @@
 {
-    "hello": "hello world!"
+  "NowSleeping": "{0}/{1} people sleeping {2} still needed to pass the night",
+  "CMDSleepPrecentage": "/twl config SleepPrecentage [int] to set the Sleep precentage<br/>/twl config SleepPrecentage to show value",
+  "cmdSleepPrecentage_show": "The sleep percentage is now {0}",
+  "cmdSleepPrecentage_modify": "The sleep percentage is {0}",
+  "null_Arg": "No arguments are present.",
+  "Too_many_args": "Too many arguments",
+  "Not_Server": "The command is only for usage with the server."
 }
