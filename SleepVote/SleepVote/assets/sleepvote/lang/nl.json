@@ -5,5 +5,9 @@
   "cmdSleepPrecentage_modify": "Het slaappercentage is {0}",
   "null_Arg": "Er zijn geen argumenten aanwezig.",
   "Too_many_args": "Te veel argumenten",
-  "Not_Server": "Het commando is alleen bedoeld voor gebruik met de server."
+  "Not_Server": "Het commando is alleen bedoeld voor gebruik met de server.",
+  "cmdDisableSleeping_False": "Slapen is nu ingeschakeld.",
+  "cmdDisableSleeping_True": "Slapen is nu uitgeschakeld.",
+  "CMDDisableSleeping": "/twl config DisableSleeping [true/false] om het slapen in te schakelen of uit te schakelen<br/>/twl config DisableSleeping om de waarde te tonen",
+  "NotBoolean": "De waarde moet waar of onwaar zijn"
 }

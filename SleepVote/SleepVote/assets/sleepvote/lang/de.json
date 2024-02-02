@@ -5,5 +5,9 @@
   "cmdSleepPrecentage_modify": "Der Prozentsatz für den Schlaf Vote beträgt {0}",
   "null_Arg": "Es sind keine Argumente vorhanden.",
   "Too_many_args": "Zu viele Argumente",
-  "Not_Server": "Der Befehl ist nur zur Verwendung mit dem Server gedacht."
+  "Not_Server": "Der Befehl ist nur zur Verwendung mit dem Server gedacht.",
+  "cmdDisableSleeping_True": "Schlafen ist jetzt deaktiviert",
+  "cmdDisableSleeping_False": "Schlafen ist jetzt aktiviert",
+  "CMDDisableSleeping": "/twl config DisableSleeping [true/false] zum Aktivieren/Deaktivieren des Schlafens<br/>/twl config DisableSleeping zum Anzeigen des Werts",
+  "NotBoolean": "Der Wert muss true oder false sein"
 }

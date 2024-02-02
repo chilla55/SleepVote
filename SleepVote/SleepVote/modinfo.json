@@ -6,7 +6,7 @@
     "Chilla55"
   ],
   "description": "A mod that let the player vote to skip the day by going to bed",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "dependencies": {
     "game": ""
   }

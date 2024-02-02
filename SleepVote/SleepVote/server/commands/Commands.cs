@@ -20,6 +20,11 @@ namespace SleepVote.server.commands
                     .WithArgs(api.ChatCommands.Parsers.OptionalFloat("Sleep Precentage", 0.75f))
                     .HandleWith(Sleeping.SleepPrecentage)
                     .WithDescription(ModLang.GetSuffix("CMDSleepPrecentage"))
+                .EndSubCommand()
+                .BeginSubCommand("DisableSleeping")
+                    .WithDescription(ModLang.GetSuffix("CMDDisableSleeping"))
+                    .WithArgs(api.ChatCommands.Parsers.OptionalBool("True/False"))
+                    .HandleWith(Sleeping.DisableSleeping)
                 .EndSubCommand();
         }
     }

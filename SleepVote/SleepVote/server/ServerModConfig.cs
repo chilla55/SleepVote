@@ -13,4 +13,5 @@ public class ServerModConfig : CommonModConfig
 {
     public override string ModCode => "SleepVote";
     public float Sleepprecentage { get; set; } = 0.5f;
+    public bool DisableSleeping { get; set; } = false;
 }

@@ -12,19 +12,6 @@ namespace SleepVote.server.commands
 {
     public static class Sleeping
     {
-        /*public static TextCommandResult HungerMult(TextCommandCallingArgs args)
-        {
-            if (args == null) return ModTextCommandResult.Error("null_Arg");
-            if (args.ArgCount > 1) return ModTextCommandResult.Error("Too_many_args");
-            ServerModConfig serverConfig = SleepVote.SleepVoteModSystem.Instance.ServerConfig;
-            if (serverConfig == null) return ModTextCommandResult.Error("Not_Server");
-            if (!args.Parsers[0].IsMissing)
-            {
-                serverConfig.Sleep.Hungermultiplier = (float)args.Parsers[0].GetValue();
-                return ModTextCommandResult.Success("cmdHunger_modify", serverConfig.Sleep.Hungermultiplier);
-            }
-            return ModTextCommandResult.Success("cmdHunger_show", serverConfig.Sleep.Hungermultiplier);
-        }*/
         public static TextCommandResult SleepPrecentage(TextCommandCallingArgs args)
         {
             
@@ -38,6 +25,23 @@ namespace SleepVote.server.commands
                 return ModTextCommandResult.Success("cmdSleepPrecentage_modify", args.Caller.Player, serverConfig.Sleepprecentage);
             }
             return ModTextCommandResult.Success("cmdSleepPrecentage_show", args.Caller.Player, serverConfig.Sleepprecentage);
+        }
+        public static TextCommandResult DisableSleeping(TextCommandCallingArgs args)
+        {
+            ServerModConfig serverConfig = SleepVote.SleepVoteModSystem.Instance.ServerConfig;
+            if (serverConfig == null) return ModTextCommandResult.Error("Not_Server", args.Caller.Player);
+            if (args.ArgCount > 1) return ModTextCommandResult.Error("Too_many_args", args.Caller.Player);
+            if (args.ArgCount == 0)
+            {
+                serverConfig.DisableSleeping = !serverConfig.DisableSleeping;
+                return ModTextCommandResult.Success("cmdDisableSleeping_" + serverConfig.DisableSleeping, args.Caller.Player);
+            }
+            if (args.Parsers[0].GetValue() is bool value)
+            {
+                serverConfig.DisableSleeping = value;
+                return ModTextCommandResult.Success("cmdDisableSleeping_"+value, args.Caller.Player);
+            }
+            return ModTextCommandResult.Error("NotBool", args.Caller.Player);
         }
     }
 }

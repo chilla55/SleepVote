@@ -20,6 +20,8 @@ namespace SleepVote.server.sleeping
         [HarmonyPrefix]
         public static bool Patch_ModSleeping_AreAllPlayersSleeping_Prefix(ICoreServerAPI ___sapi, ref bool __result)
         {
+            if (SleepVote.SleepVoteModSystem.Instance.ServerConfig.DisableSleeping)
+                return __result = false;
             List<IServerPlayer> allPlayers = ___sapi.World.AllPlayersThatCouldSleep().ToList();
             if (allPlayers.Count == 0)
                 return __result = false;

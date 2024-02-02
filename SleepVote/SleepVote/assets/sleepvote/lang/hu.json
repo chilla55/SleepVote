@@ -5,5 +5,9 @@
   "cmdSleepPrecentage_modify": "Az alvási százalék {0}",
   "null_Arg": "Nincsenek érvek.",
   "Too_many_args": "Túl sok érv",
-  "Not_Server": "A parancs csak a kiszolgálóval való használatra szolgál."
+  "Not_Server": "A parancs csak a kiszolgálóval való használatra szolgál.",
+  "cmdDisableSleeping_False": "Az alvó üzemmód most aktiválva van",
+  "cmdDisableSleeping_True": "Az alvó üzemmód most le van tiltva",
+  "CMDDisableSleeping": "/twl config DisableSleeping [true/false] az alvás letiltásának beállításához<br/>/twl config DisableSleeping értékének megjelenítéséhez",
+  "NotBoolean": "Az értéknek igaznak vagy hamisnak kell lennie"
 }
