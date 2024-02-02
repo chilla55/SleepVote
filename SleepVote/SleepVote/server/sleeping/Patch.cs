@@ -13,6 +13,7 @@ using Vintagestory.GameContent;
 
 namespace SleepVote.server.sleeping
 {
+    [HarmonyPatchCategory("Server")]
     [HarmonyPatch(typeof(ModSleeping), "AreAllPlayersSleeping")]
     public class Patch
     {
@@ -20,6 +21,8 @@ namespace SleepVote.server.sleeping
         [HarmonyPrefix]
         public static bool Patch_ModSleeping_AreAllPlayersSleeping_Prefix(ICoreServerAPI ___sapi, ref bool __result)
         {
+            if (SleepVote.SleepVoteModSystem.Instance.ServerConfig == null)
+                SleepVote.SleepVoteModSystem.Instance = ___sapi.ModLoader.GetModSystem<SleepVote.SleepVoteModSystem>();
             if (SleepVote.SleepVoteModSystem.Instance.ServerConfig.DisableSleeping)
                 return __result = false;
             List<IServerPlayer> allPlayers = ___sapi.World.AllPlayersThatCouldSleep().ToList();
@@ -37,6 +40,7 @@ namespace SleepVote.server.sleeping
             return false;
         }
     }
+    [HarmonyPatchCategory("Server")]
     [HarmonyPatch(typeof(ModSleeping), "ServerSlowTick")]
     public class Patch2
     {

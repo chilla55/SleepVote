@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using SleepVote.Shared.utils.commands;
 using Vintagestory.API.Common;
 using Vintagestory.Server;
+using Vintagestory.API.Server;
 
 namespace SleepVote.server.commands
 {
@@ -14,7 +15,6 @@ namespace SleepVote.server.commands
     {
         public static TextCommandResult SleepPrecentage(TextCommandCallingArgs args)
         {
-            
             if (args == null) return ModTextCommandResult.Error("null_Arg", args.Caller.Player);
             if (args.ArgCount > 1) return ModTextCommandResult.Error("Too_many_args", args.Caller.Player);
             ServerModConfig serverConfig = SleepVote.SleepVoteModSystem.Instance.ServerConfig;

@@ -12,6 +12,7 @@ namespace SleepVote.client.Sleeping
 {
     internal class Patches
     {
+        [HarmonyPatchCategory("Client")]
         public sealed class ModSleepingClientPatches
         {
             [HarmonyPrefix]
