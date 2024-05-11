@@ -22,6 +22,7 @@ namespace SleepVote.server.commands
             if (!args.Parsers[0].IsMissing)
             {
                 serverConfig.Sleepprecentage = Math.Clamp((float)args.Parsers[0].GetValue(),0f,1f);
+                serverConfig.Save(SleepVote.SleepVoteModSystem.Instance.ServerApi);
                 return ModTextCommandResult.Success("cmdSleepPrecentage_modify", args.Caller.Player, serverConfig.Sleepprecentage);
             }
             return ModTextCommandResult.Success("cmdSleepPrecentage_show", args.Caller.Player, serverConfig.Sleepprecentage);
@@ -39,6 +40,7 @@ namespace SleepVote.server.commands
             if (args.Parsers[0].GetValue() is bool value)
             {
                 serverConfig.DisableSleeping = value;
+                serverConfig.Save(SleepVote.SleepVoteModSystem.Instance.ServerApi);
                 return ModTextCommandResult.Success("cmdDisableSleeping_"+value, args.Caller.Player);
             }
             return ModTextCommandResult.Error("NotBool", args.Caller.Player);

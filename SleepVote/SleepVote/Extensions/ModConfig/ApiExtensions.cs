@@ -64,11 +64,6 @@ namespace SleepVote.Extensions.ModConfig
                 filename = filename + "-" + api.GetWorldId();
             }
 
-            if (!filename.EndsWith(".json"))
-            {
-                filename += ".json";
-            }
-
             api.World.Logger.Notification($"Saving modconfig at 'ModConfig/{filename}'...");
 
             api.StoreModConfig(config, filename);
