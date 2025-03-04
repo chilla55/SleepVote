@@ -32,12 +32,13 @@ namespace SleepVote.server.commands
             ServerModConfig serverConfig = SleepVote.SleepVoteModSystem.Instance.ServerConfig;
             if (serverConfig == null) return ModTextCommandResult.Error("Not_Server", args.Caller.Player);
             if (args.ArgCount > 1) return ModTextCommandResult.Error("Too_many_args", args.Caller.Player);
-            if (args.ArgCount == 0)
+            if (args.RawArgs.Length == 0)
             {
                 serverConfig.DisableSleeping = !serverConfig.DisableSleeping;
+                serverConfig.Save(SleepVote.SleepVoteModSystem.Instance.ServerApi);
                 return ModTextCommandResult.Success("cmdDisableSleeping_" + serverConfig.DisableSleeping, args.Caller.Player);
             }
-            if (args.Parsers[0].GetValue() is bool value)
+            else if (args.Parsers[0].GetValue() is bool value)
             {
                 serverConfig.DisableSleeping = value;
                 serverConfig.Save(SleepVote.SleepVoteModSystem.Instance.ServerApi);
