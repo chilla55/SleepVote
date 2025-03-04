@@ -1,0 +1,14 @@
+{
+    "_comentarios": "Traducido por C4BR3R4 || Versión del Mod: 1.0.8 || Fecha de modificación: 20250227 || Registro: http://c4br3r4.es/index.php?topic=1284.0 ",
+    "NowSleeping": "<icon path='icons/warning.svg'></icon> Necesitamos {2} jugadores más para poder pasar la noche. ({0} de {1}).",
+    "CMDSleepPrecentage": "/twl config SleepPrecentage [valor] ► Para establecer el porcentaje de durmientes.<br/>/twl config SleepPrecentage ► Mostrar el valor.",
+    "cmdSleepPrecentage_show": "El porcentaje de durmientes ahora es de {0}",
+    "cmdSleepPrecentage_modify": "El porcentaje de durmientes es {0}",
+    "null_Arg": "No hay argumentos.",
+    "Too_many_args": "Demasiados argumentos.",
+    "Not_Server": "El comando solo se puede usar en el servidor.",
+    "cmdDisableSleeping_False": "Dormir está activado.",
+    "cmdDisableSleeping_True": "Dormir está desactivado.",
+    "CMDDisableSleeping": "/twl config DisableSleeping [true/false] ► Activar/desactivar dormir.<br/>/twl config DisableSleeping ► Mostrar el valor.",
+    "NotBoolean": "El valor debe ser 'true' o 'false'."
+}
